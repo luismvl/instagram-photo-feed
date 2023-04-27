@@ -18,21 +18,57 @@
 
 <body>
 
-  <nav class="navbar bg-body-tertiary">
+  <!-- Navbar -->
+  <nav class="navbar bg-body-tertiary px-5">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="bi bi-instagram me-1"></i>Instagram</a>
 
-      <div class="ms-auto d-flex">
-        <button type="button" class="btn btn-success me-1">Create a new post</button>
-        <!-- <button type="button" class="btn btn-secondary">
-          <i class="bi bi-gear-fill"></i>
-          <i class="bi bi-caret-down-fill"></i>
-        </button> -->
+      <div class="ms-auto d-flex gap-4">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success me-1" data-bs-toggle="modal"
+          data-bs-target="#createPostModal">Create a new post</button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Create a new post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="mb-3">
+                    <label for="message-text" class="col-form-label">Caption:</label>
+                    <textarea class="form-control" id="message-text"
+                      placeholder="Add the caption of your post here"></textarea>
+                  </div>
+                </form>
+                <button type="button" class="btn border-secondary">
+                  <i class="bi bi-camera-fill"></i>
+                </button>
+                <button type="button" class="btn border-secondary">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </button>
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End modal -->
+
+        <!-- Dropdown -->
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             <i class="bi bi-gear-fill"></i>
           </button>
+
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Profile</a></li>
             <li><a class="dropdown-item" href="#">Accesibility</a></li>
@@ -43,7 +79,10 @@
             <li><a class="dropdown-item link-danger" href="#">Log out</a></li>
           </ul>
         </div>
+        <!-- End dropdown -->
+
   </nav>
+  <!-- End navbar -->
 
   <!-- Tabs -->
   <ul class="nav nav-pills justify-content-center m-4 gap-3">
@@ -55,13 +94,104 @@
       <a class="nav-link" href="#scroll" data-bs-toggle="tab"><i class="bi bi-app"></i></a>
     </li>
   </ul>
+  <!-- End tabs -->
 
   <!-- Tabs content -->
   <div class="tab-content">
-    <div class="tab-pane active" id="grid" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">Grid</div>
-    <div class="tab-pane" id="scroll" role="tabpanel" aria-labelledby="scroll-tab" tabindex="0">Scroll</div>
-  </div>
 
+    <!-- Grid view -->
+    <div class="tab-pane active" id="grid" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
+      <div class="container-fluid">
+        <div class="row gx-2 mb-2" style="height: calc(100vw/3);">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg"
+            alt="">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1682070410917-bea7cc6acc25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2018/08/28/15354563833179.jpg" alt="">
+        </div>
+
+        <div class="row gx-2 mb-2" style="height: calc(100vw/3);">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1682459155693-5c4427c6abb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1682464311010-dc8fce2f2689?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1682347362782-0a4472f1c3d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=413&q=80"
+            alt="">
+        </div>
+
+        <div class="row gx-2 mb-2" style="height: calc(100vw/3);">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1679678691014-eba529defb2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
+            alt="">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1682448228528-c56372282ed8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="">
+          <img class="col-4 h-100 object-fit-cover"
+            src="https://images.unsplash.com/photo-1682314012856-bee23e87c39b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="">
+        </div>
+      </div>
+    </div>
+    <!-- End grid view -->
+
+    <!-- Scroll view -->
+    <div class="tab-pane" id="scroll" role="tabpanel" aria-labelledby="scroll-tab" tabindex="0">
+      <div class="container-fluid w-50 m-auto">
+
+        <div class="card bg-light mb-3">
+          <div class="card-header bg-light d-flex justify-content-between p-3">
+            <h5 class="card-title">My crazy dog!</h5>
+            <span>08/26</span>
+          </div>
+          <img class="img-fluid"
+            src="https://static.fundacion-affinity.org/cdn/farfuture/PVbbIC-0M9y4fPbbCsdvAD8bcjjtbFc0NSP3lRwlWcE/mtime:1643275542/sites/default/files/los-10-sonidos-principales-del-perro.jpg"
+            alt="...">
+          <div class="card-body p-3">
+            <h6 class="card-subtitle mb-2">204 Likes</h6>
+            <p class="card-text">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+
+        <div class="card bg-light mb-3">
+          <div class="card-header bg-light d-flex justify-content-between p-3">
+            <h5 class="card-title">On vacations in croatia</h5>
+            <span>04/09</span>
+          </div>
+          <img class="img-fluid"
+            src="https://images.unsplash.com/photo-1682070410917-bea7cc6acc25?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="...">
+          <div class="card-body p-3">
+            <h6 class="card-subtitle mb-2">432 Likes</h6>
+            <p class="card-text">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+
+        <div class="card bg-light mb-3">
+          <div class="card-header bg-light d-flex justify-content-between p-3">
+            <h5 class="card-title">Amazing GOAL by Cristiano!</h5>
+            <span>06/10</span>
+          </div>
+          <img class="img-fluid"
+            src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2018/08/28/15354563833179.jpg" alt="...">
+          <div class="card-body p-3">
+            <h6 class="card-subtitle mb-2">9817321 Likes</h6>
+            <p class="card-text">This is an example of a very good photo that you can post on instagram</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End scroll view -->
+
+  </div>
+  <!-- End tabs content -->
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
